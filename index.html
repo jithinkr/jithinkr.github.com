@@ -1,11 +1,16 @@
-<html>
-	<head>
-		<title>Hello World</title>
-	</head>
-	<body>
-		<h1>Hello World!</h1>
-		<p>My first commit, as usual starting with "Hello World!" :)</p>
-		<p>Seeing if I can edit the page online!!</p>
-	</body>
+---
+layout: layout
+title: Jithin's Blog
+---
 
-</html>
+<div class="content">
+  <div class="related">
+    <ul>
+      {% for post in site.posts %}
+      <li>
+	<span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
